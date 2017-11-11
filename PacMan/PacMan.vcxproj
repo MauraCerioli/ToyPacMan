@@ -111,7 +111,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LabirinthElem.cpp" />
     <ClCompile Include="pacman.cpp" />
+    <ClCompile Include="PacMan_Type.cpp" />
+    <ClCompile Include="PacMan_BasicGame.cpp" />
+    <ClCompile Include="PacMan_Cmd.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LabirinthElem.h" />
+    <ClInclude Include="PacMan_BasicGame.h" />
+    <ClInclude Include="PacMan_Config.h" />
+    <ClInclude Include="PacMan_Cmd.h" />
+    <ClInclude Include="PacMan_Type.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
