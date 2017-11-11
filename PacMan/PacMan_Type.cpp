@@ -7,5 +7,6 @@ char PacmanDir2char(PacmanDir d) {
 	case Est:return '<';
 	case West:return '>';
 	case North:return 'v';
+	default: throw "not a valid direction";
 	}
 }

@@ -26,5 +26,6 @@ char lab_elem2char(Labirinth_Elems e) {
 	case dot:
 		return DOT_C;
 		break;
+	default: throw "not a valid labirinth element";
 	}
 }
