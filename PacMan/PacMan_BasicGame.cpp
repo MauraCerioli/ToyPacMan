@@ -67,8 +67,34 @@ void display(Labirinth_Elems m[SIZE][SIZE], PacMan pac_man)
 	display_wall_line();
 }
 
+PacmanDir cmd2dir(Command c) {
+	switch (c) {
+	case Quit:
+	case Unknown: throw "unexpected command";
+	case Go_E:return Est;
+	case Go_W:return West;
+	case Go_S:return South;
+	case Go_N:return North;
+	default:throw "not a command!";
+	}
+}
 
-bool make_move(PacMan& pac_man, int x, int y, PacmanDir d, Labirinth_Elems M[SIZE][SIZE]) {
+bool make_move(PacMan& pac_man, PacmanDir d, Labirinth_Elems M[SIZE][SIZE]) {
+	int x = pac_man.X;
+	int y = pac_man.Y;
+	switch (d)
+	{
+	case North:--y;
+		break;
+	case South:++y;
+		break;
+	case West:--x;
+		break;
+	case Est:++x;
+		break;
+	default:throw "undefined direction";
+		break;
+	}
 	bool res = wall != M[x][y];
 	if (res)
 		set_pacman(pac_man, x, y, d);

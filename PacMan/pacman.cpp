@@ -32,21 +32,15 @@ int main()
 		switch (cmd) {
 		case Quit:cout << "Grazie di aver giocato con me, alla prossima!" << endl;
 			return 0;
-		case Go_E:++next_x;
-			next_d = Est;
+		case Unknown: throw "unexpected command";
+		case Go_E:
+		case Go_W:
+		case Go_S:
+		case Go_N: next_d = cmd2dir(cmd);;
 			break;
-		case Go_W:--next_x;
-			next_d = West;
-			break;
-		case Go_S:++next_y;
-			next_d = South;
-			break;
-		case Go_N:--next_y;
-			next_d = North;
-			break;
-		default:next_d=p.direction;//non dovrebbe mai succedere
+		default:throw "not a command!";
 		}
-		if (!make_move(p,next_x,next_y,next_d,maze))
+		if (!make_move(p,next_d,maze))
 			cout << "Mossa impossibile: non puoi passare attraverso i muri!"<<endl;
 	}
 	while (true);
