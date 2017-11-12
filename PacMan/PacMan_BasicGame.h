@@ -12,8 +12,6 @@ void init(std::string config_file_name, Labirinth_Elems M[SIZE][SIZE], PacMan& p
 
 void display(Labirinth_Elems m[SIZE][SIZE], PacMan pac_man);
 
-PacmanDir cmd2dir(Command c);
-
-bool make_move(PacMan& pac_man, PacmanDir d, Labirinth_Elems M[SIZE][SIZE]);
+bool make_move(PacMan& pac_man, Command c, Labirinth_Elems M[SIZE][SIZE]);
 
 #endif

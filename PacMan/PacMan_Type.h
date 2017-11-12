@@ -1,7 +1,7 @@
 #ifndef _PACMAN_TYPE_H_
 #define _PACMAN_TYPE_H_
 
-enum PacmanDir { North, South, West, Est };
+enum PacmanDir { North, South, West, East };
 struct PacMan
 {
 	PacmanDir direction;
