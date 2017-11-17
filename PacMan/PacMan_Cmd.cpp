@@ -7,13 +7,13 @@ Command char2command(const char c) {
 	case'W': return Go_N;
 		break;
 	case 'a':
-	case'A': return Go_W; break;
+	case'A': return Go_W;
 	case 'd':
-	case'D': return Go_E; break;
+	case'D': return Go_E;
 	case 's':
-	case'S': return Go_S; break;
+	case'S': return Go_S;
 	case 'q':
-	case'Q': return Quit; break;
+	case'Q': return Quit;
 	default: return Unknown;
 	}
 }
